@@ -33,7 +33,8 @@ Vagrant.configure(2) do |config|
   # your network.
   # config.vm.network "public_network"
 
-    config.vm.synced_folder ".", "/var/www"
+    config.vm.synced_folder ".", "/var/www",
+      mount_options: ["dmode=775,fmode=664"]
   # Share an additional folder to the guest VM. The first argument is
   # the path on the host to the actual folder. The second argument is
   # the path on the guest to mount the folder. And the optional third
